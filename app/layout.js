@@ -12,7 +12,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable} ${script.variable}`}>
+    <html lang="en" className={`${serif.variable} ${sans.variable} ${script.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Only hide scroll-reveal content when JavaScript is running */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body>{children}</body>
     </html>
   );

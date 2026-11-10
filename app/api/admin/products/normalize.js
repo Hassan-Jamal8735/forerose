@@ -7,7 +7,7 @@ export function normalizeProduct(b = {}) {
     slug: str(b.slug, 120),
     tagline: str(b.tagline, 200),
     description: str(b.description),
-    category: str(b.category, 60) || 'Testers',
+    category: str(b.category, 60) || 'Eau de Parfum',
     size: str(b.size, 60),
     price: num(b.price),
     comparePrice: num(b.comparePrice),

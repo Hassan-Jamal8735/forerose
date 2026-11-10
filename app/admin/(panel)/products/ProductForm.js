@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const empty = {
-  name: '', tagline: '', description: '', category: 'Testers', size: '5 ml tester',
+  name: '', tagline: '', description: '', category: 'Eau de Parfum', size: '100 ml',
   price: 0, comparePrice: 0, stock: 0, image: '', gallery: [], notes: { top: '', heart: '', base: '' },
   featured: false, active: true,
 };
@@ -61,7 +61,7 @@ export default function ProductForm({ product }) {
         <div className="field">
           <label>Category</label>
           <input value={p.category} onChange={set('category')} list="cats" />
-          <datalist id="cats"><option value="Testers" /><option value="Sets" /><option value="Full size" /></datalist>
+          <datalist id="cats"><option value="Eau de Parfum" /><option value="Tester Box" /></datalist>
         </div>
         <div className="field"><label>Size</label><input value={p.size} onChange={set('size')} /></div>
       </div>
